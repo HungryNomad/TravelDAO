@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "scripts/3-config-nft.js": [
+      {
+        "id": "0071ff4f-0071-4b75-a65e-93643444b5dd",
+        "line": 1,
+        "version": 0,
+        "index": 0
+      }
+    ]
+  }
 }
