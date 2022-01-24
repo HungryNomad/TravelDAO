@@ -6,7 +6,7 @@ import { ThirdwebSDK } from "@3rdweb/sdk";
 const sdk = new ThirdwebSDK("rinkeby");
 
 const bundleDropModule = sdk.getBundleDropModule(
-  "0x5bE2C11CdbB7E9b5a82f1A56598d37d31F349452"
+  "0x5bE2C11CdbB7E9b5a82f1A56598d37d31F349452",
 );
 
 const App = () => {
@@ -16,8 +16,8 @@ const App = () => {
 
   const signer = provider ? provider.getSigner() : undefined;
   // Use isClaiming to keep a loading state while NFT is minting
-  const [hasClaimedNFT, setHasClaimedNFT, isClaiming, setIsClaiming] =
-    useState(false);
+  const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
+  const [isClaiming, setIsClaiming] = useState(false);
 
   useEffect(() => {
     sdk.setProviderOrSigner(signer);
@@ -77,10 +77,10 @@ const App = () => {
       .finally(() => {
         setIsClaiming(false);
       });
-  };
+  }
 
   return (
-    <div className="landing">
+    <div className="mint-nft">
       <h1>Mint your free TravelDAO membership NFT</h1>
       <button disabled={isClaiming} onClick={() => mintNFT()}>
         {isClaiming ? "Minting..." : "Mint you NFT (FREE)"}
