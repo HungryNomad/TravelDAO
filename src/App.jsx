@@ -64,7 +64,7 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>DAO Memeber page</h1>
+        <h1>DAO Member page</h1>
         <p>Congrats on being a member, more to come later.</p>
       </div>
     );
