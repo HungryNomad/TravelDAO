@@ -6,7 +6,7 @@ import { ThirdwebSDK } from "@3rdweb/sdk";
 const sdk = new ThirdwebSDK("rinkeby");
 
 const bundleDropModule = sdk.getBundleDropModule(
-  "0x5bE2C11CdbB7E9b5a82f1A56598d37d31F349452",
+  "0x5bE2C11CdbB7E9b5a82f1A56598d37d31F349452"
 );
 
 const App = () => {
@@ -60,6 +60,16 @@ const App = () => {
     );
   }
 
+  // Show DAO to members
+  if (hasClaimedNFT) {
+    return (
+      <div className="member-page">
+        <h1>DAO Memeber page</h1>
+        <p>Congrats on being a member, more to come later.</p>
+      </div>
+    );
+  }
+
   const mintNFT = () => {
     setIsClaiming(true);
     // Call bundleDropModule to mint the NFT to the user
@@ -77,7 +87,7 @@ const App = () => {
       .finally(() => {
         setIsClaiming(false);
       });
-  }
+  };
 
   return (
     <div className="mint-nft">
