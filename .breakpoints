@@ -11,9 +11,9 @@
     "scripts/7-airdrop-token.js": [
       {
         "id": "340f7e04-d717-489c-8ad1-ad0dcb2c4b67",
-        "line": 5,
-        "version": 6,
-        "index": 127
+        "line": 41,
+        "version": 8,
+        "index": 1282
       }
     ]
   }
